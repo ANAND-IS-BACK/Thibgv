@@ -422,7 +422,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         )
 
 @run_async
-def Source_about_callback(update: Update, context: CallbackContext):
+def music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "musicad_":
         query.message.edit_text(
@@ -462,7 +462,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
         )
         
 @run_async
-def Source_about_callback(update: Update, context: CallbackContext):
+def music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "muiscba_":
         query.message.edit_text(
@@ -818,8 +818,8 @@ def main():
     about_callback_handler = CallbackQueryHandler(
         Fallen_about_callback, pattern=r"fallen_"
     )
-    source_callback_handler = CallbackQueryHandler(
-        Source_about_callback, pattern=r"source_"
+    music_callback_handler = CallbackQueryHandler(
+        music_about_callback, pattern=r"music_"
     )
 
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
@@ -827,7 +827,7 @@ def main():
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(about_callback_handler)
-    dispatcher.add_handler(source_callback_handler)
+    dispatcher.add_handler(music_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)

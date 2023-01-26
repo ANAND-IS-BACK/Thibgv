@@ -499,7 +499,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     if query.data == "music_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
+            text=f"""*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
             "\n*ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ  ᴀɴᴜ  ғᴏʀ ᴘʟᴀʏɪɴɢ sᴏɴɢs/ᴠɪᴅᴇᴏꜱ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴠɪᴅᴇᴏᴄʜᴀᴛ's.
 \n┏━━━━━°❀•°:🎀 ᴀɴᴜ 🎀:°•❀°━━━━━┓                                    
 
@@ -508,9 +508,8 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         ⏰  24x7 Uᴘᴛɪᴍᴇ
         🎧 Lᴀɢ Fʀᴇᴇ 
         ⚙️ Aᴅᴠᴀɴᴄᴇᴅ Mᴜsɪᴄ Sʏsᴛᴇᴍ
-ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ᴛᴏ ʀᴇᴀᴅ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴅᴏᴄꜱ.*"
-          
-           parse_mode=ParseMode.MARKDOWN,
+ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ᴛᴏ ʀᴇᴀᴅ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴅᴏᴄꜱ.*""",
+            parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [

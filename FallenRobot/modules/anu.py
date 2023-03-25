@@ -5,9 +5,9 @@ from pyrogram import Client, filters
 
 
 url = "https://api.writesonic.com/v2/business/content/chatsonic?engine=premium"
-@Client.on_message(filters.command('/cmd'))
+@Client.on_message(filters.command('/ask'))
 async def anu_pii(bot, m):
-    text = m.text[len('/cmd ') :]
+    text = m.text[len('/ask ') :]
     payload = {
     "enable_google_results": "true",
     "enable_memory": False,

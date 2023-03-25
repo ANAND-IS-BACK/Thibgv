@@ -1,5 +1,5 @@
 import requests
-import pbot as Client
+from FallenRobot import pbot as Client
 from pyrogram import Client, filters
 
 
